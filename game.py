@@ -5,6 +5,8 @@ print("Rock, Paper, Scissors, Shoot!")
 #PROMPT USER FOR INPUT
 
 user_choice = input("Choose 'rock', 'paper', or 'scissors': ")
+print("You chose: ")
+print(user_choice)
 #if (user_choice == "rock"):
 #    print("You chose: ")
 #    print(user_choice)
@@ -22,4 +24,9 @@ user_choice = input("Choose 'rock', 'paper', or 'scissors': ")
 
 #COMPUTER CHOICE (AT RANDOM)
 
+import random
 options = ["rock", "paper", "scissors"]
+
+computer_choice = random.choice(options)
+print("Computer chose: ")
+print(computer_choice)
