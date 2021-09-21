@@ -1,15 +1,18 @@
 # game.py
 
 print("Rock, Paper, Scissors, Shoot!")
+print("-------------------------")
 
 #PROMPT USER FOR INPUT
 
+user_name = input("Welcome! What is your name? ")
 user_choice = input("Choose 'rock', 'paper', or 'scissors': ")
+print("-------------------------")
 
 #CHECK USER INPUT
 
 if (user_choice in ("rock", "paper", "scissors")) :
-    print("You chose: ", user_choice)
+    print(user_name, "chose: ", user_choice)
 
 else :
     print("Invalid choice.")
@@ -24,6 +27,8 @@ options = ["rock", "paper", "scissors"]
 
 computer_choice = random.choice(options)
 print("Computer chose: ", computer_choice)
+
+print("-------------------------")
 
 #CALCULATING WINNER 
 user_wins = "Congratulations! You won."
@@ -50,3 +55,4 @@ else :
 # if (result = tie):
 
 print(result)
+print("Thanks for playing,", user_name)
