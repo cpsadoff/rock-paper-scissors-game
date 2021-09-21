@@ -7,8 +7,8 @@ print("Rock, Paper, Scissors, Shoot!")
 user_choice = input("Choose 'rock', 'paper', or 'scissors': ")
 
 if (user_choice in ("rock", "paper", "scissors")):
-    print("You chose: ")
-    print(user_choice)
+    print("You chose: ", user_choice)
+    
 else :
     print("Invalid choice.")
     user_choice = input("Choose 'rock', 'paper', or 'scissors': ")
@@ -21,5 +21,4 @@ import random
 options = ["rock", "paper", "scissors"]
 
 computer_choice = random.choice(options)
-print("Computer chose: ")
-print(computer_choice)
+print("Computer chose: ", computer_choice)
