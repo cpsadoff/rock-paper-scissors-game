@@ -6,19 +6,23 @@ print("-------------------------")
 #PROMPT USER FOR INPUT
 
 user_name = input("Welcome! What is your name? ")
-user_choice = input("Choose 'rock', 'paper', or 'scissors': ")
-print("-------------------------")
+
+def take_choice() :
+    user_choice = input("Choose 'rock', 'paper', or 'scissors': ")
+    print("-------------------------")
 
 #CHECK USER INPUT
 
-if (user_choice in ("rock", "paper", "scissors")) :
-    print(user_name, "chose: ", user_choice)
+    if (user_choice in ("rock", "paper", "scissors")) :
+        print(user_name, "chose: ", user_choice)
+        return user_choice
 
-else :
-    print("Invalid choice.")
-    user_choice = input("Choose 'rock', 'paper', or 'scissors': ")
+    else :
+        print("Invalid choice.")
+        #exit()
+        return take_choice()
 
-# i want to run this recursively
+user_choice = take_choice()
 
 #COMPUTER CHOICE (AT RANDOM)
 
@@ -35,6 +39,7 @@ print("-------------------------")
 user_wins = "Congratulations! You won."
 computer_wins = "The computer won. Sorry :("
 tie = "It was a tie! Try again."
+#result = " "
 
 if (user_choice == computer_choice) :
     result = tie
@@ -51,7 +56,7 @@ elif ((user_choice == "scissors") and (computer_choice == "paper")) :
 elif ((user_choice == "scissors") and (computer_choice == "rock")) :
     result = computer_wins
 else :
-    result = tie
+    result = result
 
 # if (result = tie):
 
