@@ -45,7 +45,7 @@ print("-------------------------")
 
 user_wins = "Congratulations! You won."
 computer_wins = "The computer won. Sorry :("
-tie = "It was a tie! Try again."
+tie = "It was a tie! Try again next time."
 #result = " "
 
 if (user_choice == computer_choice) :
