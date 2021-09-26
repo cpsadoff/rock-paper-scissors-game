@@ -5,7 +5,14 @@ print("-------------------------")
 
 #PROMPT USER FOR INPUT
 
-user_name = input("Welcome! What is your name? ")
+#user_name = input("Welcome! What is your name? ")
+import os 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+user_name = os.getenv("PLAYER_NAME")
+print("Welcome to the game,", user_name)
 
 def take_choice() :
     user_choice = input("Choose 'rock', 'paper', or 'scissors': ")
